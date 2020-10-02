@@ -1,0 +1,64 @@
+import java.util.*;
+interface Taxable
+{
+double salesTax_rate=7,incomeTax_rate=10.5;
+void calcTax();
+}
+class Employee implements Taxable
+{
+double emp_id,salary,incomeTax;
+String name;
+void input()
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter Emp_id=");
+emp_id=sc.nextDouble();
+System.out.println("Enter Name=");
+name=sc.nextLine();
+System.out.println("Enter Yearly Salary=");
+salary=sc.nextDouble();
+}
+public void calcTax()
+{
+incomeTax=salary-(incomeTax_rate/100);
+System.out.println("Emp_id="+emp_id);
+System.out.println("Name="+name);
+System.out.println("Yearly Salary="+salary);
+System.out.println("IncomeTax="+incomeTax);
+}
+}
+class Product implements Taxable
+{
+double pid,price,salesTax;
+String quantity;
+void input1()
+{
+Scanner c=new Scanner(System.in);
+System.out.println("Enter Product id=");
+pid=c.nextDouble();
+System.out.println("Enter Quantity=");
+quantity=c.nextLine();
+System.out.println("Enter Product Price=");
+price=c.nextDouble();
+}
+public void calcTax()
+{
+salesTax=price-(salesTax_rate/100);
+System.out.println("Product id="+pid);
+System.out.println("Quantity="+quantity);
+System.out.println("Product Price="+price);
+System.out.println("salesTax="+salesTax);
+}
+}
+class Tax
+{
+public static void main(String args[])
+{
+Employee obj1=new Employee();
+Product obj2=new Product();
+obj1.input();
+obj1.calcTax();
+obj2.input1();
+obj2.calcTax();
+}
+}

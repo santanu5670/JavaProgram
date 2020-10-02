@@ -1,0 +1,30 @@
+import java.util.*;
+interface inter1
+{
+int roll=21;
+void dispa();
+}
+interface inter2
+{
+void dispb();
+}
+class inter12 implements inter1,inter2
+{
+public void dispa()
+{
+System.out.println("It is in the  interface A and roll="+roll);
+}
+public void dispb()
+{
+System.out.println("It is in interface B");
+}
+}
+class Interface_a
+{
+public static void main(String args[])
+{
+c obj=new c();
+obj.dispa();
+obj.dispb();
+}
+} 

@@ -1,0 +1,42 @@
+import java.util.Scanner;
+class employee{
+    String name;
+    int id;
+}
+class manager extends employee{
+    String dept;
+    String project; 
+}
+class pro_manager extends manager{
+    void get_input()
+    {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter id , name , dept , project :");
+        id = input.nextInt();
+        name = input.nextLine();
+        dept = input.nextLine();
+    }
+    void display()
+    {
+        System.out.println("ID : " + id);
+        System.out.println("Name : " + name);
+        System.out.println("Dept : " + dept);
+    }
+}
+
+class inheritance{
+    public static void main(String args[])
+    {
+        int i;
+        pro_manager obj[] = new pro_manager[5];
+        for(i=0;i<2;i++)
+        {
+            obj[i] = new pro_manager();
+            obj[i].get_input();
+        }
+        for(i=0;i<2;i++)
+        {
+            obj[i].display();
+        }
+    }
+}

@@ -1,0 +1,54 @@
+What is exception? Give example. 
+Exception handling: An exception is a condition that caused by runtime error in the program when the java interpreter encounter an error such as dividing an integer
+ by zero in creates exception object and throws it. If the exception object not works properly the interpreter will display an error message.
+ 
+Exception handling consist of following steps 
+1) Find the problem (Hit the exception). 
+2) Inform that an error has occur (Throw the exception). 
+3) Catch the exception (Receive the error information). 
+4) Take the corrective action. 
+Java has 5 keywords for exception handling:
+1.try
+2.catch
+3.finally 
+4.throw 
+5.Throws
+
+Example of exception handling in java:
+
+ import java.util.*; 
+ class Error3  
+{  
+public static void main(String args[]) 
+  {   
+float a,b,c;   
+Scanner s=new Scanner(System.in); 
+System.out.println("Enter the result"); 
+ a=s.nextInt();  
+ b=s.nextInt();   
+try   
+ {   
+ c=a/b;    
+System.out.println("Division is "+c);   
+ }   
+catch(ArithmeticException e)    
+{    
+System.out.println("Divide by zero");  
+  } 
+  } 
+ }
+What are difference between error and exception?
+
+1)Basic=An error is caused due to lack of system resources.	
+An exception is caused because of the code.
+2)Recovery=An error is irrecoverable.	
+An exception is recoverable.
+3)Keywords=There is no means to handle an error by the program code.	
+Exceptions are handled using three keywords "try", "catch", and "throw".
+4)Consequences=As the error is detected the program will terminated abnormally.	
+As an exception is detected, it is thrown and caught by the "throw" and "catch" keywords correspondingly
+6)Types=Errors are classified as unchecked type.	
+Exceptions are classified as checked or unchecked type
+ 
+  
+
